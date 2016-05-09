@@ -53,8 +53,8 @@ public class Juego extends JPanel
 		while(running) {
 			start = System.nanoTime(); //Tiempo inicial
 			Room.teclas();
-			update();
-			draw();
+			Room.draw(g);
+			Room.update();
 			pintarPantalla();
 			elapsed = System.nanoTime() - start;
 			wait = tiempo - elapsed / 1000000;
@@ -65,10 +65,6 @@ public class Juego extends JPanel
 		/*===========================================*/
 	}
 	
-	/*Room===========================================*/
-	private void update() {Room.update();}
-	private void draw() {Room.draw(g);}
-	/*==============================================*/
 	private void pintarPantalla() {
 		Graphics g2 = getGraphics();
 		g2.drawImage(img, 0, 0,ANCHO * SCALE, ALTO * SCALE,null);

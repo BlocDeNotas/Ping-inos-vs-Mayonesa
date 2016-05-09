@@ -121,7 +121,7 @@ public class Room {
 		
 		//============================================================
 	}
-	
+
 	
 	//Salto
 	public static void salto(int p) {

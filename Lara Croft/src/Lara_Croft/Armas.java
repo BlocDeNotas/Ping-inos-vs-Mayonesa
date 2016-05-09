@@ -1,16 +1,15 @@
 package Lara_Croft;
 
 public class Armas extends Objeto{
-	private int daño,speed,knockback,frames,alto,ancho, player, p;
+	private int dano,speed,knockback,frames,alto,ancho, player, p;
 	private String nombre;
 	private ColisionAtk ColisionArma;
 	private double x,y;
 	private boolean colis, on = false;
-	private static int pato = 1;
 	
-	public Armas(int daño, int speed, int knockback, int frames, double x, double y, int alto, int ancho, String nombre, int player) {
+	public Armas(int dano, int speed, int knockback, int frames, double x, double y, int alto, int ancho, String nombre, int player) {
 		super();
-		this.daño = daño;
+		this.dano = dano;
 		this.speed = speed;
 		this.knockback = knockback;
 		this.frames = frames;
@@ -33,8 +32,8 @@ public class Armas extends Objeto{
 		return ataque;
 	}
 	
-	public int getDaño() {return daño;}
-	public void setDaño(int daño) {this.daño = daño;}
+	public int getdano() {return dano;}
+	public void setdano(int dano) {this.dano = dano;}
 	public int getSpeed() {return speed;}
 	public void setSpeed(int speed) {this.speed = speed;}
 	public int getKnockback() {return knockback;}
@@ -64,7 +63,7 @@ public class Armas extends Objeto{
 			ColisionArma.update(this.x, this.y);
 			colis = ColisionArma.Colision(Room.playergetX(p), Room.playergetY(p), Room.playergetAlto(p), Room.playergetAncho(p));
 			if(colis) {
-				Room.playersetHp(p, daño);
+				Room.playersetHp(p, dano);
 				Room.playersetParpadeo(p, true);
 			}
 		}
