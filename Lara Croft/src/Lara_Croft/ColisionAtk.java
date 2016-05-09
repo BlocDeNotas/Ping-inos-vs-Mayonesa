@@ -3,6 +3,7 @@ package Lara_Croft;
 public class ColisionAtk {
 	private double x, y;
 	private int alto, ancho;
+	private static int pato2 = 2;
 	
 	public ColisionAtk(double x, double y, int alto, int ancho) {
 		this.alto = alto;
