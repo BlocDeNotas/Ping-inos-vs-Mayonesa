@@ -1,5 +1,7 @@
-package Lara_Croft;
+package Inicializar;
 import javax.swing.JFrame;
+
+import Instanciable.Juego;
 
 public class Ventana {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Lara_Croft;
+package Instanciable;
 
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
@@ -6,7 +6,9 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-public class hud extends Objeto{
+import Abstracto.Pintable;
+
+public class hud extends Pintable{
 	private BufferedImage skin;
 	private int x;
 	

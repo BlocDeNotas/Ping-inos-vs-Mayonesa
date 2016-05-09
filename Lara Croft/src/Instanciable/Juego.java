@@ -1,4 +1,4 @@
-package Lara_Croft;
+package Instanciable;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.awt.event.*;
 
 import javax.swing.JPanel;
+
+import Abstracto.Room;
 
 @SuppressWarnings("serial")
 public class Juego extends JPanel 
@@ -43,7 +45,7 @@ public class Juego extends JPanel
 	private void init() {
 		img = new BufferedImage(ANCHO, ALTO,BufferedImage.TYPE_INT_RGB);
 		g = (Graphics2D) img.getGraphics();
-		new Room();
+		Room.init();
 	}
 	
 	public void run() {

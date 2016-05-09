@@ -1,6 +1,10 @@
-package Lara_Croft;
+package Instanciable.Armas;
 
-public class Armas extends Objeto{
+import Abstracto.Pintable;
+import Abstracto.Room;
+import Instanciable.Colisiones.ColisionAtk;
+
+public class Armas extends Pintable{
 	private int dano,speed,knockback,frames,alto,ancho, player, p;
 	private String nombre;
 	private ColisionAtk ColisionArma;
@@ -31,6 +35,21 @@ public class Armas extends Objeto{
 		}
 		return ataque;
 	}
+
+	
+	public void update(double d, double e, boolean atk) {
+		this.x = d;
+		this.y = e-2;
+		if(player == 2) p = 1; else p = 2;
+		if(atk && on) {
+			ColisionArma.update(this.x, this.y);
+			colis = ColisionArma.Colision(Room.playergetX(p), Room.playergetY(p), Room.playergetAlto(p), Room.playergetAncho(p));
+			if(colis) {
+				Room.playersetHp(p, dano);
+				Room.playersetParpadeo(p, true);
+			}
+		}
+	}
 	
 	public int getdano() {return dano;}
 	public void setdano(int dano) {this.dano = dano;}
@@ -53,19 +72,4 @@ public class Armas extends Objeto{
 	public int getPlayer() {return player;}
 	public boolean getOn() {return on;}
 	public void setOn(boolean on) {this.on = on;}
-
-	
-	public void update(double d, double e, boolean atk) {
-		this.x = d;
-		this.y = e-2;
-		if(player == 2) p = 1; else p = 2;
-		if(atk && on) {
-			ColisionArma.update(this.x, this.y);
-			colis = ColisionArma.Colision(Room.playergetX(p), Room.playergetY(p), Room.playergetAlto(p), Room.playergetAncho(p));
-			if(colis) {
-				Room.playersetHp(p, dano);
-				Room.playersetParpadeo(p, true);
-			}
-		}
-	}
 }

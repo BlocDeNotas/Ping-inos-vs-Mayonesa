@@ -1,12 +1,15 @@
-package Lara_Croft;
+package Instanciable;
 
 import java.util.ArrayList;
 import javax.imageio.ImageIO;
 
+import Abstracto.Solido;
+import Instanciable.Armas.Armas;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public class Player extends Objeto  {
+public class Player extends Solido  {
 	private int health, maxHealth, manad1 = 30, nAnimacion = 9, cDisparo, cEspada = 0, energia, contletra = 0, lcd = 0, pos;
 	private boolean parpadeo, planeo, ataqueb, disparo, atkespada = false, contr = false, agachar, rodar;
 	private long parpadeoT;
@@ -18,7 +21,7 @@ public class Player extends Objeto  {
 	private final int[] numFrames = {2, 3, 3, 3, 3, 3, 3, 3,2}, fps = {400,40,150,100,100,100, 50, 50,50}, ANCHO = {20, 20, 20, 20, 20, 20, 40, 20,40}, ALTO = {30,30,30,30,30,30,30,15,15};
 	private static final int NORMAL = 0, ANDAR = 1, DISPARO = 2, CAER = 3, SALTAR = 4, PLANEAR = 5, ATKESPADA = 6, AGACHAR = 7, ATKCAIDA = 8;
 	private BufferedImage hoja;
-	hud hud;
+	public hud hud;
 	private Armas espada;
 	
 	//Constructor

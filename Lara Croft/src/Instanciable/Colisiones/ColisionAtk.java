@@ -1,4 +1,4 @@
-package Lara_Croft;
+package Instanciable.Colisiones;
 
 public class ColisionAtk {
 	private double x, y;

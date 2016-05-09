@@ -1,4 +1,4 @@
-package Lara_Croft;
+package Instanciable.Colisiones;
 
 public class MascaraColisiones {
 	private int[] x = {200,0,0}, y = {165,110,170}, alto = {20,20,0}, ancho = {200,200,200};

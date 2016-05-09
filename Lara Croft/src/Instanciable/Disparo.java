@@ -1,4 +1,4 @@
-package Lara_Croft;
+package Instanciable;
 
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
@@ -6,7 +6,11 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-public class Disparo extends Objeto {
+import Abstracto.Room;
+import Abstracto.Solido;
+import Instanciable.Colisiones.ColisionAtk;
+
+public class Disparo extends Solido {
 	private ColisionAtk colisiondisp;
 	private boolean player,col,f,mDerecha;
 	private int daño;
@@ -14,7 +18,7 @@ public class Disparo extends Objeto {
 	private BufferedImage hoja = null;
 	
 	//Constructor
-	Disparo(double x, double y, boolean dir, boolean player, double contd) {
+	public Disparo(double x, double y, boolean dir, boolean player, double contd) {
 		this.x = x;
 		this.y = y;
 		System.out.println("x"+x);

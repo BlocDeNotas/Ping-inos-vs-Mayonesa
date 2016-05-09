@@ -1,4 +1,4 @@
-package Lara_Croft;
+package Instanciable;
 
 import java.awt.image.BufferedImage;
 

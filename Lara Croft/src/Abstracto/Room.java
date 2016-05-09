@@ -1,11 +1,16 @@
-package Lara_Croft;
+package Abstracto;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List; //Op
 
-public class Room {
+import Instanciable.Disparo;
+import Instanciable.Fondo;
+import Instanciable.Juego;
+import Instanciable.Player;
+
+public abstract class Room {
 	private static Fondo fondo;
 	private static Player[] player = {null, new Player(1),new Player(2)};//, player2;
 	private static Disparo disparo;
@@ -15,7 +20,7 @@ public class Room {
 	private static double[] cont= {1, 1, 1}, contR = {0, 0, 0},xcosa = {0, 30, 240};
 	private static double contd = 1;
 	
-	public Room() {
+	public static void init() {
 		fondo = new Fondo("/Backgrounds/fondo.jpg", 0.1);
 		for(int i = 1; i <= 2; i++) {
 			player[i] = new Player(i);
