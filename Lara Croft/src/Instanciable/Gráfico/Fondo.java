@@ -1,4 +1,4 @@
-package Instanciable;
+package Instanciable.Gráfico;
 
 import java.awt.*;
 import java.awt.image.*;

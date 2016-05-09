@@ -9,6 +9,7 @@ import javax.imageio.ImageIO;
 import Abstracto.Room;
 import Abstracto.Solido;
 import Instanciable.Colisiones.ColisionAtk;
+import Instanciable.Gráfico.Animacion;
 
 public class Disparo extends Solido {
 	private ColisionAtk colisiondisp;

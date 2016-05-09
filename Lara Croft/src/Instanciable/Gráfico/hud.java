@@ -1,4 +1,4 @@
-package Instanciable;
+package Instanciable.Gráfico;
 
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;

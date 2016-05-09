@@ -5,6 +5,8 @@ import javax.imageio.ImageIO;
 
 import Abstracto.Solido;
 import Instanciable.Armas.Armas;
+import Instanciable.Gráfico.Animacion;
+import Instanciable.Gráfico.hud;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

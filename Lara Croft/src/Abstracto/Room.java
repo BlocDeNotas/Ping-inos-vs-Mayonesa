@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.List; //Op
 
 import Instanciable.Disparo;
-import Instanciable.Fondo;
 import Instanciable.Juego;
 import Instanciable.Player;
+import Instanciable.Gráfico.Fondo;
 
 public abstract class Room {
 	private static Fondo fondo;

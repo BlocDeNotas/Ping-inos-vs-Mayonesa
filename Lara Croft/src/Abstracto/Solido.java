@@ -35,6 +35,10 @@ public abstract class Solido extends Pintable {
 		return suelo;
 	}
 	
+	public boolean SueloYmin() {
+		return true;
+	}
+	
 	public void setPosition(double x, double y) {
 		this.x = x;
 		this.y = y;

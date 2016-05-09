@@ -1,6 +1,6 @@
 package Abstracto;
 
-import Instanciable.Animacion;
+import Instanciable.Gráfico.Animacion;
 
 public abstract class Pintable {
 	protected boolean mDerecha;
